@@ -1,0 +1,37 @@
+
+    <div class="card-table">
+        <div class="cart-items">
+            <table  class="mat-table">
+                <thead>
+                    <tr>
+                        <th>Supplier</th>
+                        <th>Product Image</th>
+                        <th>Product Name</th>
+                        <th>Price (RM)</th>
+                        <th>Delete item</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of cartItems">
+                        <td>{{ 'no supplier' }}</td>
+                        <td><img [src]="item.image" alt="Product Image" class="product-image"></td>
+                        <td>{{ item.itemName }}</td>
+                        <td>{{ item.price }}</td>
+                        <td><button (click)="deleteitem(item)" mat-fab_button color="warn"><mat-icon>delete</mat-icon></button></td>
+                      </tr>
+                    <button routerLink="/checkout" mat-raised-button color="warn">Checkout</button>
+                </tbody>
+            </table>
+            <button mat-raised-button color="accent" routerLink="" class="back-home">Add items</button>
+        </div>
+    </div>
+
+
+
+
+<div class="cart" *ngIf="cartItems.length === 0">
+    <p>cart is empty</p>
+    <button routerLink="" mat-raised-button color="primary">
+        Continue shopping
+    </button>
+</div>

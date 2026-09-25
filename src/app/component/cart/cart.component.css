@@ -1,0 +1,27 @@
+.cart{
+    display: grid;
+    place-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+.mat-table{
+    align-items: center;
+    margin: 0%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.product-image{
+    width: 100px;
+    height: auto;
+}
+
+.mat-raised-button{
+    display: flex;
+    align-items: center;
+    place-items: center;
+    text-align: center;
+    margin: auto;
+}

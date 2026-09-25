@@ -1,0 +1,11 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+.product-card {
+    max-width: 400px;
+  }
+  
+  .product-image {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Question_mark_%28black%29.svg/800px-Question_mark_%28black%29.svg.png');
+    background-size: cover;
+  }

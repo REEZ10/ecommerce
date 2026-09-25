@@ -1,0 +1,36 @@
+<header>
+    <mat-toolbar color="primary">
+        <span class="material-icons">shopping_cart</span>
+        <strong>Cart.Net</strong>
+        <span class="example-spacer"></span>
+        <button mat-raised-button [routerLink]="['cart']">
+            <span class="material-icons">shopping_basket</span>
+        </button>
+    </mat-toolbar>
+</header>
+
+<mat-card class="product-card" *ngFor="let item of myItems">
+    <mat-card-header>
+        <div mat-card-avatar class="product-image"></div>
+        <mat-card-title> random Supplier</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src={{item.image}}>
+    <mat-card-content>
+        <p>
+        {{ item.itemName }}
+        </p>
+        <strong>{{item.price}}</strong>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="accent"(click)="addToCart(item)" >
+            Add to card
+        </button>
+    </mat-card-actions>
+</mat-card>
+
+
+  
+  
+
+    
+       
