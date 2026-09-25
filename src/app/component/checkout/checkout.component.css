@@ -1,6 +1,21 @@
-.paytime{
+.checkout-wrapper {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+.checkout-title {
+    margin-bottom: 24px;
+}
+.checkout-form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: auto;
+    gap: 16px;
+}
+.full-width { width: 100%; }
+.pay-btn {
+    height: 44px;
+    border-radius: 8px !important;
+    font-size: 15px;
 }

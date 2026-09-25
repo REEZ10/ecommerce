@@ -1,37 +1,32 @@
-
-    <div class="card-table">
-        <div class="cart-items">
-            <table  class="mat-table">
-                <thead>
-                    <tr>
-                        <th>Supplier</th>
-                        <th>Product Image</th>
-                        <th>Product Name</th>
-                        <th>Price (RM)</th>
-                        <th>Delete item</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let item of cartItems">
-                        <td>{{ 'no supplier' }}</td>
-                        <td><img [src]="item.image" alt="Product Image" class="product-image"></td>
-                        <td>{{ item.itemName }}</td>
-                        <td>{{ item.price }}</td>
-                        <td><button (click)="deleteitem(item)" mat-fab_button color="warn"><mat-icon>delete</mat-icon></button></td>
-                      </tr>
-                    <button routerLink="/checkout" mat-raised-button color="warn">Checkout</button>
-                </tbody>
-            </table>
-            <button mat-raised-button color="accent" routerLink="" class="back-home">Add items</button>
+<div class="cart-wrapper" *ngIf="cartItems.length > 0">
+    <h2 class="cart-title">Your Cart</h2>
+    <div class="cart-items">
+        <div class="cart-row" *ngFor="let item of cartItems">
+            <img [src]="item.image" alt="Product Image" class="product-image">
+            <div class="cart-info">
+                <p class="cart-item-name">{{ item.itemName }}</p>
+                <p class="cart-item-supplier">No Supplier</p>
+            </div>
+            <span class="cart-item-price">RM {{ item.price }}</span>
+            <button (click)="deleteitem(item)" mat-icon-button color="warn">
+                <mat-icon>delete</mat-icon>
+            </button>
         </div>
     </div>
+    <div class="cart-actions">
+        <button routerLink="" mat-stroked-button color="accent" class="back-home">
+            Add More Items
+        </button>
+        <button routerLink="/checkout" mat-raised-button color="warn" class="checkout-btn">
+            Proceed to Checkout
+        </button>
+    </div>
+</div>
 
-
-
-
-<div class="cart" *ngIf="cartItems.length === 0">
-    <p>cart is empty</p>
+<div class="cart-empty" *ngIf="cartItems.length === 0">
+    <mat-icon class="empty-icon">shopping_cart</mat-icon>
+    <p>Your cart is empty</p>
     <button routerLink="" mat-raised-button color="primary">
-        Continue shopping
+        Continue Shopping
     </button>
 </div>
