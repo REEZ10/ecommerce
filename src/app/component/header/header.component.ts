@@ -12,12 +12,12 @@ export class HeaderComponent {
     {
       itemName: 'my item 1',
       image: 'https://nzxt.com/assets/cms/34299/1666138830-h5-flow-hero-white.png?auto=format&fit=crop&h=1000&w=1000',
-      price: 'RM 4000'
+      price: '4000'
     },
     {
       itemName: 'my item 2',
       image: 'https://m.media-amazon.com/images/I/51A7kRyEnIL.jpg',
-      price: 'RM 2'
+      price: '2.50'
     }
   ]
 
